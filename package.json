@@ -4,7 +4,7 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
-  "homepage": "https://krischilds.github.io/gitHubBrowser/",
+  "homepage": "https://krischilds.github.io/gitUserBrowser/",
   "dependencies": {
     "bootstrap": "4.4.1",
     "prop-types": "15.7.2",

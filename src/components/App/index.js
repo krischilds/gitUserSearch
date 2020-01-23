@@ -8,14 +8,14 @@ function App() {
   const routing = (
     <Router>
       <div>
-        <Route exact path="#" component={GitUserHome} />
-        <Route exact path="#userSearch" component={GitUserSearch} />
+        <Route exact path="/" component={GitUserHome} />
+        <Route exact path="/userSearch" component={GitUserSearch} />
         <Route
           exact
-          path="#userSearchResults"
+          path="/userSearchResults"
           component={GitUserSearchResults}
         />
-        <Route exact path="#users" component={DisplayUsers} />
+        <Route exact path="/users" component={DisplayUsers} />
       </div>
     </Router>
   );

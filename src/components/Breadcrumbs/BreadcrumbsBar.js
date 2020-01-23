@@ -9,13 +9,13 @@ function createUserBreadcrumbs(user, userRepos) {
   let crumbs = [];
   if (user) {
     crumbs.push(
-      <Breadcrumb.Item key={"search"} href="#userSearch">
+      <Breadcrumb.Item key={"search"} href="/userSearch">
         User Search
       </Breadcrumb.Item>
     );
     if (userRepos) {
       crumbs.push(
-        <Breadcrumb.Item key={"name"} href="#">
+        <Breadcrumb.Item key={"name"} href="/">
           {user.name ?? user.login}
         </Breadcrumb.Item>
       );
@@ -26,7 +26,7 @@ function createUserBreadcrumbs(user, userRepos) {
       );
     } else {
       crumbs.push(
-        <Breadcrumb.Item href="#" key={"name"} active="true">
+        <Breadcrumb.Item href="/" key={"name"} active="true">
           {user.name}
         </Breadcrumb.Item>
       );
