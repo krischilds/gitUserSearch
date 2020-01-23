@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/gitUserBrowser/static/css/main.bec75b73.chunk.css",
+    "main.js": "/gitUserBrowser/static/js/main.65de2640.chunk.js",
+    "main.js.map": "/gitUserBrowser/static/js/main.65de2640.chunk.js.map",
+    "runtime-main.js": "/gitUserBrowser/static/js/runtime-main.91028fde.js",
+    "runtime-main.js.map": "/gitUserBrowser/static/js/runtime-main.91028fde.js.map",
+    "static/css/2.0996cbbd.chunk.css": "/gitUserBrowser/static/css/2.0996cbbd.chunk.css",
+    "static/js/2.d8aee226.chunk.js": "/gitUserBrowser/static/js/2.d8aee226.chunk.js",
+    "static/js/2.d8aee226.chunk.js.map": "/gitUserBrowser/static/js/2.d8aee226.chunk.js.map",
+    "index.html": "/gitUserBrowser/index.html",
+    "precache-manifest.bd7495593cc3f4fe8f3bf44b6eac41ff.js": "/gitUserBrowser/precache-manifest.bd7495593cc3f4fe8f3bf44b6eac41ff.js",
+    "service-worker.js": "/gitUserBrowser/service-worker.js",
+    "static/css/2.0996cbbd.chunk.css.map": "/gitUserBrowser/static/css/2.0996cbbd.chunk.css.map",
+    "static/css/main.bec75b73.chunk.css.map": "/gitUserBrowser/static/css/main.bec75b73.chunk.css.map",
+    "static/js/2.d8aee226.chunk.js.LICENSE": "/gitUserBrowser/static/js/2.d8aee226.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.91028fde.js",
+    "static/css/2.0996cbbd.chunk.css",
+    "static/js/2.d8aee226.chunk.js",
+    "static/css/main.bec75b73.chunk.css",
+    "static/js/main.65de2640.chunk.js"
+  ]
+}
