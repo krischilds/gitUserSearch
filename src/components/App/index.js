@@ -6,7 +6,7 @@ import { Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   const routing = (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
         <Route exact path="/" component={GitUserHome} />
         <Route exact path="/userSearch" component={GitUserSearch} />
