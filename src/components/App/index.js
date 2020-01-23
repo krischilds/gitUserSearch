@@ -3,10 +3,11 @@ import AppNav from "../AppNav";
 import GitBrowser from "../GitBrowser";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, BrowserRouter as Router } from "react-router-dom";
+var buildVersion = require("build-version");
 
 function App() {
   const routing = (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename="/GitUserSearch">
       <div>
         <Route exact path="/" component={GitUserHome} />
         <Route exact path="/userSearch" component={GitUserSearch} />
@@ -24,12 +25,17 @@ function App() {
 }
 
 function GitUserHome() {
-  return (
-    <>
-      <AppNav title="GIT Browser" />
-      <GitBrowser />
-    </>
-  );
+  buildVersion().then(version => {
+    console.log("BUILD VERSION: " + version);
+
+    return (
+      <>
+        <AppNav title="GIT Browser" />
+        <GitBrowser />
+        <div>BUILD VERSION: {version}</div>
+      </>
+    );
+  });
 }
 
 function GitUserSearch() {
