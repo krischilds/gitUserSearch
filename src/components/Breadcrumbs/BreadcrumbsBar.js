@@ -31,7 +31,7 @@ function createUserBreadcrumbs(user, userRepos) {
         </Breadcrumb.Item>
       );
       crumbs.push(
-        <Breadcrumb.Item key={"repos"} href="#userRepos">
+        <Breadcrumb.Item key={"repos"} href="/userRepos">
           Repos
         </Breadcrumb.Item>
       );
