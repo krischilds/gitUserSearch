@@ -4,6 +4,8 @@ import GitBrowser from "../GitBrowser";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, HashRouter as Router } from "react-router-dom";
 
+const version = "1.0.1";
+
 function App(props) {
   console.log("App version = " + props.version);
 
@@ -22,12 +24,13 @@ function App(props) {
 }
 
 function DisplayUserHome() {
-  const version = "1.0.0";
+  console.log("BUILD VERSION: " + version);
+
   return (
     <>
       <AppNav title="GIT Browser" />
       <GitBrowser />
-      <div>BUILD VERSION: {version}</div>
+      <div className="container">BUILD VERSION: {version}</div>
     </>
   );
 }
@@ -37,6 +40,7 @@ function DisplayUserSearch() {
     <>
       <AppNav title="GIT User Search" />
       <GitBrowser />
+      <div className="container">BUILD VERSION: {version}</div>
     </>
   );
 }
@@ -46,6 +50,7 @@ function DisplayUserSearchResults() {
     <>
       <AppNav title="GIT User Search Results" />
       <GitBrowser />
+      <div className="container">BUILD VERSION: {version}</div>
     </>
   );
 }
