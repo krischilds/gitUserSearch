@@ -5,6 +5,9 @@ import BreadcrumbsBar from "../Breadcrumbs";
 import UserSearchResults from "./UserSearchResults";
 // import { FaUser, FaSearch, FaChevronRight, FaHome } from "react-icons/fa";
 
+// TODO: determine dynamically
+const baseName = "/gitUserSearch";
+
 class GitBrowser extends Component {
   constructor(props) {
     super(props);
@@ -95,6 +98,7 @@ class GitBrowser extends Component {
     return (
       <Container>
         <BreadcrumbsBar
+          basename={baseName}
           userData={this.state.userData}
           userRepoList={this.state.userRepoList}
         />

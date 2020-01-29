@@ -5,4 +5,4 @@ import "./styles.css";
 import App from "./components/App";
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<App version="1.0.0" />, rootElement);

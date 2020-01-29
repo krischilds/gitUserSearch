@@ -2,21 +2,18 @@ import React from "react";
 import AppNav from "../AppNav";
 import GitBrowser from "../GitBrowser";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Route, BrowserRouter as Router } from "react-router-dom";
-var buildVersion = require("build-version");
+import { Route, HashRouter as Router } from "react-router-dom";
 
-function App() {
+function App(props) {
+  console.log("App version = " + props.version);
+
   const routing = (
     <Router basename="/GitUserSearch">
       <div>
-        <Route exact path="/" component={GitUserHome} />
-        <Route exact path="/userSearch" component={GitUserSearch} />
-        <Route
-          exact
-          path="/userSearchResults"
-          component={GitUserSearchResults}
-        />
-        <Route exact path="/users" component={DisplayUsers} />
+        <Route exact path="/" component={DisplayUserHome} />
+        <Route path="/userSearch" component={DisplayUserSearch} />
+        <Route path="/userSearchResults" component={DisplayUserSearchResults} />
+        <Route path="/users" component={DisplayUsers} />
       </div>
     </Router>
   );
@@ -24,21 +21,18 @@ function App() {
   return routing;
 }
 
-function GitUserHome() {
-  buildVersion().then(version => {
-    console.log("BUILD VERSION: " + version);
-
-    return (
-      <>
-        <AppNav title="GIT Browser" />
-        <GitBrowser />
-        <div>BUILD VERSION: {version}</div>
-      </>
-    );
-  });
+function DisplayUserHome() {
+  const version = "1.0.0";
+  return (
+    <>
+      <AppNav title="GIT Browser" />
+      <GitBrowser />
+      <div>BUILD VERSION: {version}</div>
+    </>
+  );
 }
 
-function GitUserSearch() {
+function DisplayUserSearch() {
   return (
     <>
       <AppNav title="GIT User Search" />
@@ -47,7 +41,7 @@ function GitUserSearch() {
   );
 }
 
-function GitUserSearchResults() {
+function DisplayUserSearchResults() {
   return (
     <>
       <AppNav title="GIT User Search Results" />

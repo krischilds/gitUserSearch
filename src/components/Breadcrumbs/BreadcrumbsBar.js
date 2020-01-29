@@ -2,20 +2,26 @@ import React from "react";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 
 export default function BreadcrumbsBar(props) {
-  return createUserBreadcrumbs(props.userData, props.userRepoList);
+  return createUserBreadcrumbs(
+    props.userData,
+    props.userRepoList,
+    props.basename
+  );
 }
 
-function createUserBreadcrumbs(user, userRepos) {
+function createUserBreadcrumbs(user, userRepos, baseName) {
   let crumbs = [];
   if (user) {
+    let url3 = `${baseName}#userSearch`;
     crumbs.push(
-      <Breadcrumb.Item key={"search"} href="/userSearch">
+      <Breadcrumb.Item key={"search"} href={url3}>
         User Search
       </Breadcrumb.Item>
     );
     if (userRepos) {
+      let url4 = `${baseName}#`;
       crumbs.push(
-        <Breadcrumb.Item key={"name"} href="/">
+        <Breadcrumb.Item key={"name"} href={url4}>
           {user.name ?? user.login}
         </Breadcrumb.Item>
       );
@@ -25,13 +31,15 @@ function createUserBreadcrumbs(user, userRepos) {
         </Breadcrumb.Item>
       );
     } else {
+      let url = `${baseName}#`;
       crumbs.push(
-        <Breadcrumb.Item href="/" key={"name"} active="true">
+        <Breadcrumb.Item href={url} key={"name"} active="true">
           {user.name}
         </Breadcrumb.Item>
       );
+      let url2 = `${baseName}#userRepos`;
       crumbs.push(
-        <Breadcrumb.Item key={"repos"} href="/userRepos">
+        <Breadcrumb.Item key={"repos"} href={url2}>
           Repos
         </Breadcrumb.Item>
       );
@@ -43,14 +51,6 @@ function createUserBreadcrumbs(user, userRepos) {
       </Breadcrumb.Item>
     );
   }
-
-  /*
-  const breadcrumbs = crumbs.map(({ url, label }) => (
-    <Breadcrumb.Item key={url} href={url}>
-      {label}
-    </Breadcrumb.Item>
-  ));
-*/
 
   return <Breadcrumb>{crumbs}</Breadcrumb>;
 }
