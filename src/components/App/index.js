@@ -3,7 +3,8 @@ import AppNav from "../AppNav";
 import GitBrowser from "../GitBrowser";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, BrowserRouter as Router } from "react-router-dom";
-var buildVersion = require("build-version");
+
+const version = "1.0.1";
 
 function App() {
   const routing = (
@@ -25,17 +26,15 @@ function App() {
 }
 
 function GitUserHome() {
-  buildVersion().then(version => {
-    console.log("BUILD VERSION: " + version);
+  console.log("BUILD VERSION: " + version);
 
-    return (
-      <>
-        <AppNav title="GIT Browser" />
-        <GitBrowser />
-        <div>BUILD VERSION: {version}</div>
-      </>
-    );
-  });
+  return (
+    <>
+      <AppNav title="GIT Browser" />
+      <GitBrowser />
+      <div className="container">BUILD VERSION: {version}</div>
+    </>
+  );
 }
 
 function GitUserSearch() {
@@ -43,6 +42,7 @@ function GitUserSearch() {
     <>
       <AppNav title="GIT User Search" />
       <GitBrowser />
+      <div className="container">BUILD VERSION: {version}</div>
     </>
   );
 }
@@ -52,6 +52,7 @@ function GitUserSearchResults() {
     <>
       <AppNav title="GIT User Search Results" />
       <GitBrowser />
+      <div className="container">BUILD VERSION: {version}</div>
     </>
   );
 }

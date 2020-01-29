@@ -43,14 +43,5 @@ function createUserBreadcrumbs(user, userRepos) {
       </Breadcrumb.Item>
     );
   }
-
-  /*
-  const breadcrumbs = crumbs.map(({ url, label }) => (
-    <Breadcrumb.Item key={url} href={url}>
-      {label}
-    </Breadcrumb.Item>
-  ));
-*/
-
   return <Breadcrumb>{crumbs}</Breadcrumb>;
 }
